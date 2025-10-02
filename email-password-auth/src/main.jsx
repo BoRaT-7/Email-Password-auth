@@ -6,6 +6,7 @@ import Main from './Layout/Main';
 import Home from './Components/Home/Home';
 import Login from './Components/Log-in/Login';
 import Register from './Components/Register/Register';
+import Singup from './Components/Singup/Singup';
 
 const router = createBrowserRouter([
   {
@@ -14,7 +15,9 @@ const router = createBrowserRouter([
     children:[
       { path: "/", element: <Home /> },
       { path: "/login", element: <Login /> },
-      { path: "/register", element: <Register /> }
+      { path: "/register", element: <Register /> },
+      {path:"/singUp",element:<Singup></Singup>},
+
     ]
   },
 ]);
