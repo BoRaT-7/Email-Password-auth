@@ -11,9 +11,12 @@ const Singup = () => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
-    console.log(email, password);
+    const terms = e.target.terms.cheakbox;
+    console.log(email, password,terms);
 
     setErrorMessage('');
+    setSuccess(false);
+    
 
     if (password.length < 6) {
       setErrorMessage('Password should be 6 characters or longer');
@@ -71,7 +74,7 @@ const Singup = () => {
 
             <fieldset className="">
   <label className="label">
-    <input type="checkbox"  className="checkbox" />
+    <input type="checkbox" name='terms'  className="checkbox" />
     Accept Our Tearm And Condition
   </label>
 </fieldset>
