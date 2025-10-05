@@ -1,7 +1,6 @@
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import React, { useState } from 'react';
-import { auth } from '../Firebase/firebase.init'; // 👈 এইটা অবশ্যই import করতে হবে
-
+import { auth } from '../Firebase/firebase.init'; 
 const Login = () => {
   const [success, setSuccess] = useState(false);
   const [loginError, setLoginerror] = useState('');
@@ -18,7 +17,7 @@ const Login = () => {
     signInWithEmailAndPassword(auth, email, password)
       .then(result => {
         console.log(result.user);
-        setSuccess(true); // ✅ success এখন true হবে
+        setSuccess(true); 
       })
       .catch(error => {
         console.log('ERROR', error.message);
@@ -49,7 +48,6 @@ const Login = () => {
               </fieldset>
             </form>
 
-            {/* ✅ success or error messages */}
             {success && <p className="text-green-600">✅ User Login successfully</p>}
             {loginError && <p className="text-red-600">❌ {loginError}</p>}
           </div>
