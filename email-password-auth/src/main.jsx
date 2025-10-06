@@ -8,6 +8,7 @@ import Login from './Components/Log-in/Login';
 import Register from './Components/Register/Register';
 import Singup from './Components/Singup/Singup';
 import AuthProvider from './Providers/AuthProvider';
+import Order from './Components/Order/Order';
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,8 @@ const router = createBrowserRouter([
       { path: "/login", element: <Login /> },
       { path: "/register", element: <Register /> },
       {path:"/singUp",element:<Singup></Singup>},
+      {path:'order', element:<Order></Order>},
+
 
     ]
   },
