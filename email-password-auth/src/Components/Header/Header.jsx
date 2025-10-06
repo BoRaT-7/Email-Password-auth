@@ -1,4 +1,3 @@
-import { User } from 'lucide-react';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
@@ -9,12 +8,8 @@ const Header = () => {
       <li><NavLink to="/login">Login</NavLink></li>
       <li><NavLink to="/register">Register</NavLink></li>
       <li><NavLink to="/singup">Signup</NavLink></li>
-       {
-        User && <>
-           <li><NavLink to="/order">Orders</NavLink></li>
+      <li><NavLink to="/order">Orders</NavLink></li>
       
-        </>
-       }
     </>
   );
 
